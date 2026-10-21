@@ -47,8 +47,11 @@ made there first, then mirrored here.
 2. Once the request is approved, run `/apply-change changes/<file>.md` in
    Claude Code. It applies the edits, rebuilds, verifies, and then waits for
    your approval before opening a PR.
-3. CI runs `make verify` for both systems on every PR, and every PR needs
-   approval from @timng-aot (see `.github/CODEOWNERS`).
+3. Open a PR; don't push to `main`. CI runs `make verify` for both systems on
+   every PR, and `.github/CODEOWNERS` requests a review from @timng-aot.
+   Neither blocks a merge, because branch protection isn't available for this
+   private repo on the org's GitHub plan. Merge only after the check passes
+   and @timng-aot approves.
 
 `CLAUDE.md` has the rules Claude Code follows in this repo.
 
@@ -65,6 +68,4 @@ the tokens. Requires Python 3.9+ (standard library only) and Node 18+.
 
 ## Status
 
-See `CHANGELOG.md`. Pending for formsflow.ai: line heights and email guidance
-(`changes/2026-10-21-formsflow-line-height-and-email.md`), which is waiting on
-the Figma text-style update.
+See `CHANGELOG.md`.
