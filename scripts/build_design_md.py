@@ -9,6 +9,10 @@ For each system with "mode": "generated" in systems/<name>/system.json:
     src/semantic.json        human design decisions   (colour roles, default weights, radii)
     src/DESIGN.prose.md      hand-authored body       (rationale, rules, do's and don'ts)
 
+typography.json uses the JSON layout from zeroheight's Figma plugin
+(ff.text-style.<family>.<style>.<property>.value). load_typography() reads only
+that layout; a Tokens Studio export needs a loader update first.
+
 The front matter is GENERATED. Never hand-edit it in DESIGN.md: edit a source
 file and rebuild. Rebuilt from the July 2026 converter (ff_tokens_to_designmd.py);
 output format is unchanged.

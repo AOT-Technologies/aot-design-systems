@@ -32,6 +32,10 @@ src/DESIGN.prose.md     ─┘   decisions + hand-written guidance
 
 - Figma owns token values. A change starts in Figma, and a fresh export
   replaces the file in `tokens/`.
+- `typography.json` uses the JSON layout from zeroheight's Figma plugin:
+  `ff.text-style.<family>.<style>`, with each property as `{"value": ...}`.
+  The build reads only that layout. A Tokens Studio export needs a loader
+  update in `scripts/build_design_md.py` first.
 - zeroheight is the human-facing formsflow design system. The prose distils it
   for agents.
 
