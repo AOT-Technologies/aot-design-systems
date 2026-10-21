@@ -3,7 +3,7 @@
 - **ID:** 2026-10-21-formsflow-line-height-and-email
 - **System:** formsflow
 - **Requested by:** Tim
-- **Status:** pending (blocked on Part A: a fresh Figma export)
+- **Status:** applied (2026-10-21)
 - **Touches:** `systems/formsflow/tokens/typography.json` (via Figma), `systems/formsflow/src/DESIGN.prose.md`
 
 ## Why

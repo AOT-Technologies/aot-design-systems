@@ -3,6 +3,18 @@
 Changes to the published `DESIGN.md` files. Newest first, each entry tagged
 with its system.
 
+## 2026-10-21 [formsflow] Line heights and email guidance
+
+- Every size now has its own px line-height (from `16px` for `caption` to
+  `88px` for `max6`) instead of `1`.
+- `tokens/typography.json`: line heights only, read from the Figma text styles
+  on the `formsflow-V8` branch through the Figma connector (not a plugin
+  export). All other values matched Figma and are unchanged.
+- Prose: a 12-size scale, per-size line heights, and a new Email section (font
+  stack, semibold headings, sizes, container). Workflow notification emails
+  are out of scope.
+- Request: `changes/2026-10-21-formsflow-line-height-and-email.md`.
+
 ## 2026-10-21 [repo] Two-system setup
 
 - The repo now holds two systems, each with its own `DESIGN.md`:
