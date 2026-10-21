@@ -3,6 +3,14 @@
 Changes to the published `DESIGN.md` files. Newest first, each entry tagged
 with its system.
 
+## 2026-10-21 [formsflow] Heading weights
+
+- `h1`, `h2` and `h3` now default to semibold (600) instead of medium (500),
+  matching zeroheight. `max1` stays medium; `max2` to `max6` are unchanged.
+- Email: the weights note now explains why email avoids medium and light,
+  instead of treating semibold headings as an exception.
+- Request: `changes/2026-10-21-formsflow-heading-weights.md`.
+
 ## 2026-10-21 [formsflow] Line heights and email guidance
 
 - Every size now has its own px line-height (from `16px` for `caption` to

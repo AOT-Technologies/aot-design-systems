@@ -3,7 +3,7 @@
 - **ID:** 2026-10-21-formsflow-heading-weights
 - **System:** formsflow
 - **Requested by:** Tim
-- **Status:** pending
+- **Status:** applied (2026-10-21)
 - **Touches:** `systems/formsflow/src/semantic.json`, `systems/formsflow/src/DESIGN.prose.md`
 - **Follows:** `2026-10-21-formsflow-line-height-and-email` (applied and merged).
   The find strings below match the text that request merged.
