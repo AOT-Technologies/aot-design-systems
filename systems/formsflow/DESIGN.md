@@ -11,62 +11,62 @@ typography:
     fontFamily: "'Figtree', 'Figtree-Regular'"
     fontSize: 12px
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 16px
   body-sml:
     fontFamily: "'Figtree', 'Figtree-Regular'"
     fontSize: 14px
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 20px
   body:
     fontFamily: "'Figtree', 'Figtree-Regular'"
     fontSize: 16px
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 24px
   h3:
     fontFamily: "'Figtree', 'Figtree-Medium'"
     fontSize: 20px
     fontWeight: 500
-    lineHeight: 1
+    lineHeight: 28px
   h2:
     fontFamily: "'Figtree', 'Figtree-Medium'"
     fontSize: 24px
     fontWeight: 500
-    lineHeight: 1
+    lineHeight: 32px
   h1:
     fontFamily: "'Figtree', 'Figtree-Medium'"
     fontSize: 32px
     fontWeight: 500
-    lineHeight: 1
+    lineHeight: 40px
   max1:
     fontFamily: "'Figtree', 'Figtree-Medium'"
     fontSize: 36px
     fontWeight: 500
-    lineHeight: 1
+    lineHeight: 44px
   max2:
     fontFamily: "'Figtree', 'Figtree-Regular'"
     fontSize: 40px
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 48px
   max3:
     fontFamily: "'Figtree', 'Figtree-Regular'"
     fontSize: 44px
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 52px
   max4:
     fontFamily: "'Figtree', 'Figtree-Regular'"
     fontSize: 48px
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 56px
   max5:
     fontFamily: "'Figtree', 'Figtree-Regular'"
     fontSize: 64px
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 72px
   max6:
     fontFamily: "'Figtree'"
     fontSize: 80px
     fontWeight: 300
-    lineHeight: 1
+    lineHeight: 88px
 spacing:
   "0": 0px
   "1": 4px
@@ -198,7 +198,7 @@ Take neutrals from the `gray` ramp (`gray-50`/`gray-white` lightest surfaces,
 
 ## Typography
 
-Single family: **Figtree**, a 10-size scale. Sizes (px): `caption` 12 · `body-sml`
+Single family: **Figtree**, a 12-size scale. Sizes (px): `caption` 12 · `body-sml`
 14 · `body` 16 · `h3` 20 · `h2` 24 · `h1` 32 · `max1` 36 · `max2` 40 · `max3` 44 ·
 `max4` 48 · `max5` 64 · `max6` 80.
 
@@ -216,12 +216,13 @@ encode the defaults above.
 **Explicit weight variants (prose only).** Every size also has four weight variants
 — `-light` (300), `-regular` (400), `-medium` (500), `-semibold` (600), e.g.
 `body-semibold`, `h1-light`, `max6-regular`. They share their size's `fontSize` and
-`lineHeight: 1`; only `fontWeight` (and `fontFamily`) changes. The `fontFamily` is
+`lineHeight`; only `fontWeight` (and `fontFamily`) changes. The `fontFamily` is
 `'Figtree'` for `-light` and `-semibold`, `'Figtree', 'Figtree-Medium'` for
 `-medium`, and `'Figtree', 'Figtree-Regular'` for `-regular`. These are kept out of
 the front matter — reach for them only for deliberate overrides of a size's default.
 
-**Line-height is intentionally `1.0` across the entire scale** — apply it as given; do not loosen it.
+**Each size carries its own line-height** in the front matter. Apply it as given;
+don't loosen, tighten or round it.
 
 **Casing & emphasis** (not brand-specified — interim default for consistency):
 sentence case for all headings and UI text; avoid ALL CAPS except short labels or
@@ -265,6 +266,46 @@ icon buttons — where `pill` isn't enough). Don't introduce radii outside these
 - **button-primary (hover/pressed)** — bg `primary-hover`.
 - **card** — surface `gray-white`, border `1px gray-200`, radius `md`, `shadow-sm`.
 - **input** — surface `gray-white`, border `1px gray-300`, radius `md`; on focus add `shadow-focus`.
+
+## Email
+
+Applies to HTML emails that formsflow.ai sends: marketing, trial and onboarding
+lifecycle, and account notifications.
+
+**Out of scope: workflow notification emails.** Emails that customers' formsflow
+workflows send (approval requests, submission confirmations and similar) are not
+covered. They can carry a customer's own branding, which needs separate font and
+colour rules. Don't apply this section to them; flag the gap instead.
+
+**Font stack.** Use exactly:
+`font-family: 'Figtree', 'Helvetica Neue', Helvetica, Arial, sans-serif;`
+This is the only sanctioned fallback stack: it adds fallbacks, not brand
+families. Load Figtree with a Google Fonts `<link>` in the `<head>`. Add an
+`<!--[if mso]>` style block that sets `font-family: Arial, sans-serif` on text
+elements, so Outlook for Windows doesn't fall back to Times New Roman. Never use
+`'Figtree-Regular'` or `'Figtree-Medium'` in email; they are design-tool names
+and won't resolve. Email is Figtree-only.
+
+**Weights.** Headings use the semibold variants (`h1-semibold`, `h2-semibold`,
+`h3-semibold`); all other text uses regular (400). Don't use light (300) or
+medium (500) in email.
+
+**Why email headings are semibold.** Product headings default to medium (500),
+but email can't rely on Figtree loading: Gmail and Outlook for Windows show a
+fallback font, and those fallbacks only have regular and bold. Medium falls back
+to regular, so headings would match body text and the hierarchy flattens.
+Semibold falls back to bold, so headings stay distinct in every client. Where
+Figtree does load, email headings look slightly heavier than in the product.
+That trade-off is deliberate: a reliable hierarchy in every inbox matters more
+than an exact weight match with the product.
+
+**Sizes.** Use only `caption`, `body-sml`, `body`, `h3`, `h2` and `h1`; no `max`
+sizes. Apply each token's px line-height as given, with
+`mso-line-height-rule: exactly` so Outlook respects it.
+
+**Container.** 600px maximum width, centred, fluid at 100% below that. Side
+padding uses spacing step `6` (24px), dropping to `4` (16px) at 600px and below.
+Use `6` (24px) between blocks and `8` (32px) between sections.
 
 ## Do's and Don'ts
 
