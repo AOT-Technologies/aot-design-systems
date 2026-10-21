@@ -1,0 +1,7 @@
+{
+  "name": "aot",
+  "title": "AOT Technologies",
+  "mode": "manual",
+  "source": "AOT Technologies Design System, Claude Design project 875c59c0-39ca-4f76-b742-061041f7f2ac",
+  "checks": ["lint"]
+}

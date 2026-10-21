@@ -1,0 +1,31 @@
+{
+  "_comment": "Deliberate design decisions applied on top of the Figma token exports at build time. Change a value here only when a design decision changes, and record it in CHANGELOG.md.",
+  "version": "alpha",
+  "description": "formsflow.ai unified design system.",
+  "colors": {
+    "primary": "indigo-900",
+    "primary-hover": "indigo-shade",
+    "on-primary": "gray-white"
+  },
+  "typography_defaults": {
+    "caption": "regular",
+    "body-sml": "regular",
+    "body": "regular",
+    "h3": "medium",
+    "h2": "medium",
+    "h1": "medium",
+    "max1": "medium",
+    "max2": "regular",
+    "max3": "regular",
+    "max4": "regular",
+    "max5": "regular",
+    "max6": "light"
+  },
+  "rounded": {
+    "none": { "value": "0px" },
+    "sm": { "value": "3px" },
+    "md": { "value": "5px", "comment": "default for all components" },
+    "pill": { "value": "25px", "comment": "buttons + rounded elements" },
+    "full": { "value": "9999px", "comment": "genuine circular elements (avatars, dots, icon buttons)" }
+  }
+}

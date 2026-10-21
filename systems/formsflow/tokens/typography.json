@@ -1,0 +1,824 @@
+{
+  "ff": {
+    "text-style": {
+      "sans": {
+        "caption-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "12px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "caption-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "12px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "caption-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "12px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "caption-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "12px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "body-sml-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "14px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "body-sml-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "14px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "body-sml-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "14px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "body-sml-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "14px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "body-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "16px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "body-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "16px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "body-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "16px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "body-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "16px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "h3-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "20px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "h3-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "20px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "h3-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "20px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "h3-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "20px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "h2-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "24px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "h2-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "24px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "h2-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "24px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "h2-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "24px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "h1-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "32px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "h1-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "32px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "h1-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "32px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "h1-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "32px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "max1-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "36px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "max1-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "36px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "max1-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "36px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "max1-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "36px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "max2-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "40px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "max2-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "40px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "max2-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "40px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "max2-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "40px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "max3-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "44px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "max3-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "44px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "max3-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "44px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "max3-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "44px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "max4-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "48px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "max4-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "48px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "max4-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "48px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "max4-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "48px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "max5-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "64px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "max5-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "64px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "max5-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "64px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "max5-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "64px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        },
+        "max6-light": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "80px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "300"
+          }
+        },
+        "max6-medium": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Medium'"
+          },
+          "font-size": {
+            "value": "80px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "500"
+          }
+        },
+        "max6-regular": {
+          "font-family": {
+            "value": "'Figtree', 'Figtree-Regular'"
+          },
+          "font-size": {
+            "value": "80px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "400"
+          }
+        },
+        "max6-semibold": {
+          "font-family": {
+            "value": "'Figtree'"
+          },
+          "font-size": {
+            "value": "80px"
+          },
+          "letter-spacing": {
+            "value": "0px"
+          },
+          "line-height": {
+            "value": "100%"
+          },
+          "font-weight": {
+            "value": "600"
+          }
+        }
+      }
+    }
+  }
+}
