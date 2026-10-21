@@ -23,19 +23,19 @@ typography:
     fontWeight: 400
     lineHeight: 24px
   h3:
-    fontFamily: "'Figtree', 'Figtree-Medium'"
+    fontFamily: "'Figtree'"
     fontSize: 20px
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 28px
   h2:
-    fontFamily: "'Figtree', 'Figtree-Medium'"
+    fontFamily: "'Figtree'"
     fontSize: 24px
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 32px
   h1:
-    fontFamily: "'Figtree', 'Figtree-Medium'"
+    fontFamily: "'Figtree'"
     fontSize: 32px
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 40px
   max1:
     fontFamily: "'Figtree', 'Figtree-Medium'"
@@ -208,7 +208,7 @@ Single family: **Figtree**, a 12-size scale. Sizes (px): `caption` 12 · `body-s
 
 **Default weights (the front-matter tokens).** Each size carries one default weight,
 and only that default token lives in the front matter: `caption` / `body-sml` /
-`body` = regular (400); `h3` / `h2` / `h1` / `max1` = medium (500); `max2`–`max5` =
+`body` = regular (400); `h3` / `h2` / `h1` = semibold (600); `max1` = medium (500); `max2`–`max5` =
 regular (400); `max6` = light (300). Weight lightens as display sizes grow, since
 size itself carries the emphasis. Use these semantic tokens (`body`, `h1`, …) — they
 encode the defaults above.
@@ -286,18 +286,16 @@ elements, so Outlook for Windows doesn't fall back to Times New Roman. Never use
 `'Figtree-Regular'` or `'Figtree-Medium'` in email; they are design-tool names
 and won't resolve. Email is Figtree-only.
 
-**Weights.** Headings use the semibold variants (`h1-semibold`, `h2-semibold`,
-`h3-semibold`); all other text uses regular (400). Don't use light (300) or
-medium (500) in email.
+**Weights.** Headings use their default semibold tokens (`h1`, `h2`, `h3`);
+all other text uses regular (400). Don't use light (300) or medium (500) in
+email.
 
-**Why email headings are semibold.** Product headings default to medium (500),
-but email can't rely on Figtree loading: Gmail and Outlook for Windows show a
-fallback font, and those fallbacks only have regular and bold. Medium falls back
-to regular, so headings would match body text and the hierarchy flattens.
-Semibold falls back to bold, so headings stay distinct in every client. Where
-Figtree does load, email headings look slightly heavier than in the product.
-That trade-off is deliberate: a reliable hierarchy in every inbox matters more
-than an exact weight match with the product.
+**Why email avoids medium and light.** Email can't rely on Figtree loading:
+Gmail and Outlook for Windows show a fallback font, and those fallbacks only
+have regular and bold. Medium and light fall back to regular, so a medium
+heading would match body text and the hierarchy flattens. Semibold, the
+standard heading weight, falls back to bold, so headings stay distinct in every
+client.
 
 **Sizes.** Use only `caption`, `body-sml`, `body`, `h3`, `h2` and `h1`; no `max`
 sizes. Apply each token's px line-height as given, with
