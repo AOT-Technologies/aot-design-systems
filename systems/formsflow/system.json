@@ -3,5 +3,5 @@
   "title": "formsflow.ai",
   "mode": "generated",
   "source": "Figma token exports (tokens/) plus src/semantic.json and src/DESIGN.prose.md",
-  "checks": ["build-current", "prose-ramp", "lint"]
+  "checks": ["build-current", "prose-ramp", "plugin-current", "lint"]
 }

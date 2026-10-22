@@ -167,6 +167,9 @@ def main():
     names = [args.system] if args.system else generated_systems()
     failed = False
     for name in names:
+        if system_config(name).get("mode") != "generated":
+            print(f"{name} is a manual system: nothing to generate.")
+            continue
         try:
             result = build(name)
         except (BuildError, KeyError, ValueError) as e:

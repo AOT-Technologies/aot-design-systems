@@ -4,6 +4,7 @@ verify.py: run the checks each system declares in systems/<name>/system.json.
 
     build-current  DESIGN.md matches a fresh build from source (generated systems)
     prose-ramp     the primitive colour ramp in the prose matches tokens/variables.json
+    plugin-current the Claude Code plugin's copy of DESIGN.md matches the system's
     lint           the DESIGN.md linter reports 0 errors and 0 warnings
 
 Usage:
@@ -20,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_design_md as builder  # noqa: E402
+import build_plugins  # noqa: E402
 
 ROOT = builder.ROOT
 SYSTEMS = builder.SYSTEMS
@@ -53,6 +55,13 @@ def check_prose_ramp(name, _):
     return None
 
 
+def check_plugin_current(name, _):
+    copy = build_plugins.copy_path(name)
+    if not copy.exists() or copy.read_text() != (SYSTEMS / name / "DESIGN.md").read_text():
+        return f"{copy.relative_to(ROOT)} is out of date: run `make build SYSTEM={name}` and commit the result."
+    return None
+
+
 def check_lint(name, linter):
     path = SYSTEMS / name / "DESIGN.md"
     r = subprocess.run(["npx", "-y", "-p", linter, "designmd", "lint", str(path)],
@@ -69,7 +78,8 @@ def check_lint(name, linter):
     return None
 
 
-CHECKS = {"build-current": check_build_current, "prose-ramp": check_prose_ramp, "lint": check_lint}
+CHECKS = {"build-current": check_build_current, "prose-ramp": check_prose_ramp,
+          "plugin-current": check_plugin_current, "lint": check_lint}
 
 
 def main():

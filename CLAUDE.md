@@ -42,8 +42,9 @@ export. The first real export replaces them.
 
 ## AOT (manual)
 
-`systems/aot/DESIGN.md` is the source file. There's no build step, and its
+`systems/aot/DESIGN.md` is the source file. Nothing generates it, and its
 front matter (colours, type, radii, spacing, components) is edited directly.
+Run `make build SYSTEM=aot` afterwards to refresh its plugin copy.
 
 - The Claude Design project is upstream. A token value changes there first, by
   a person, and is then mirrored here through a change request. Don't change a
@@ -52,12 +53,28 @@ front matter (colours, type, radii, spacing, components) is edited directly.
   named spacing (`xs` to `3xl`), and component references such as
   `"{colors.primary}"`.
 
+## Distribution (both systems)
+
+Consumers get each `DESIGN.md` through a Claude plugin or a GitHub release.
+See the README's "Using these files".
+
+- `.claude-plugin/marketplace.json` lists one plugin per system, in
+  `plugins/<system>-design/`. `plugin.json` and `SKILL.md` are hand-authored.
+  The `DESIGN.md` beside `SKILL.md` is a generated copy: `make build` writes
+  it, and `make verify` fails if it's stale. Leave `version` out of
+  `plugin.json` so plugins track `main`.
+- `.github/workflows/release.yml` runs `scripts/release.py` on every push to
+  `main`. It releases each system whose `DESIGN.md` changed, tagged
+  `<system>/YYYY-MM-DD`, with that system's `CHANGELOG.md` entries as notes.
+  Never create tags or releases by hand.
+
 ## Hard rules (both systems)
 
 1. **Don't invent values.** No new colours, sizes, radii, shadows, font
    families, spacing steps or components unless a change request specifies
    them. If something is missing, flag the gap.
-2. **Never hand-edit a generated file**: formsflow's `DESIGN.md` or `tokens/`.
+2. **Never hand-edit a generated file**: formsflow's `DESIGN.md` or `tokens/`,
+   or a plugin's copy of `DESIGN.md`.
 3. **`make verify` must pass for every system.** That means 0 errors and 0
    warnings from the linter, plus each system's own checks.
 4. **Approval gate.** After building and verifying, summarise the diff and
@@ -90,7 +107,7 @@ and set the request's `Status` to `applied`.
 ## Commands
 
 ```
-make build [SYSTEM=formsflow]   # regenerate generated systems
+make build [SYSTEM=<name>]      # regenerate generated systems, refresh plugin copies
 make verify [SYSTEM=<name>]     # run each system's checks (default: all)
 ```
 

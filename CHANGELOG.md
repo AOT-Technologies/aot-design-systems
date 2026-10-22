@@ -3,6 +3,17 @@
 Changes to the published `DESIGN.md` files. Newest first, each entry tagged
 with its system.
 
+## 2026-10-22 [repo] Claude plugins and GitHub releases
+
+- The repo is now a Claude plugin marketplace, `aot-design-systems`, with one
+  plugin per system: `formsflow-design` and `aot-design`. Each holds a skill
+  and a generated copy of the system's `DESIGN.md`.
+- `make build` refreshes the plugin copies (`scripts/build_plugins.py`), and a
+  new `plugin-current` check in `make verify` fails if one is stale.
+- `.github/workflows/release.yml` publishes a GitHub release per system when
+  its `DESIGN.md` changes on `main` (`scripts/release.py`).
+- README: new "Using these files" section.
+
 ## 2026-10-21 [formsflow] Email section aligned with zeroheight
 
 - Scope no longer lists trial emails: marketing, onboarding lifecycle and
