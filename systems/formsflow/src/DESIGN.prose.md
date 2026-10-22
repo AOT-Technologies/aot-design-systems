@@ -180,20 +180,22 @@ icon buttons — where `pill` isn't enough). Don't introduce radii outside these
 
 ## Email
 
-Applies to HTML emails that formsflow.ai sends: marketing, trial and onboarding
-lifecycle, and account notifications.
+Applies to HTML emails that formsflow.ai sends: marketing, onboarding lifecycle,
+and account notifications.
 
 **Out of scope: workflow notification emails.** Emails that customers' formsflow
 workflows send (approval requests, submission confirmations and similar) are not
 covered. They can carry a customer's own branding, which needs separate font and
 colour rules. Don't apply this section to them; flag the gap instead.
 
-**Font stack.** Use exactly:
+**Font stack.** Use exactly, on every text element:
 `font-family: 'Figtree', 'Helvetica Neue', Helvetica, Arial, sans-serif;`
 This is the only sanctioned fallback stack: it adds fallbacks, not brand
-families. Load Figtree with a Google Fonts `<link>` in the `<head>`. Add an
-`<!--[if mso]>` style block that sets `font-family: Arial, sans-serif` on text
-elements, so Outlook for Windows doesn't fall back to Times New Roman. Never use
+families. Load Figtree with a Google Fonts `<link>` in the `<head>`. Outlook for
+Windows can ignore the whole stack when the first font is a web font and fall
+back to Times New Roman, so add this conditional style exactly:
+`<!--[if mso]><style>body, table, td, p, a, h1, h2, h3 { font-family: Arial, sans-serif !important; }</style><![endif]-->`
+Never use
 `'Figtree-Regular'` or `'Figtree-Medium'` in email; they are design-tool names
 and won't resolve. Email is Figtree-only.
 
@@ -209,7 +211,10 @@ standard heading weight, falls back to bold, so headings stay distinct in every
 client.
 
 **Sizes.** Use only `caption`, `body-sml`, `body`, `h3`, `h2` and `h1`; no `max`
-sizes. Apply each token's px line-height as given, with
+sizes. Use `h1` for the headline, once per email; `h2` for subheadings; `h3`
+for section headings; `body` for default text; `body-sml` for secondary text
+and metadata; and `caption` for the footer, legal text and unsubscribe link.
+Apply each token's px line-height as given, with
 `mso-line-height-rule: exactly` so Outlook respects it.
 
 **Container.** 600px maximum width, centred, fluid at 100% below that. Side

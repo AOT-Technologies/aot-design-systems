@@ -3,6 +3,15 @@
 Changes to the published `DESIGN.md` files. Newest first, each entry tagged
 with its system.
 
+## 2026-10-21 [formsflow] Email section aligned with zeroheight
+
+- Scope no longer lists trial emails: marketing, onboarding lifecycle and
+  account notifications.
+- The Outlook for Windows conditional style is now given as an exact snippet.
+- Added one `h1` per email, what each email size is for, and the fallback
+  stack on every text element.
+- Request: `changes/2026-10-21-formsflow-email-zeroheight-alignment.md`.
+
 ## 2026-10-21 [formsflow] Heading weights
 
 - `h1`, `h2` and `h3` now default to semibold (600) instead of medium (500),
