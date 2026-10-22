@@ -10,11 +10,59 @@ load before building UI or writing copy for that brand. Both follow the
 | formsflow.ai | formsflow.ai product UI, marketing site and email | [`systems/formsflow/DESIGN.md`](systems/formsflow/DESIGN.md) |
 | AOT Technologies | AOT Technologies brand, collateral and AOT-branded product UI | [`systems/aot/DESIGN.md`](systems/aot/DESIGN.md) |
 
-**To use one:** give your agent the `DESIGN.md` for the brand you're working
-on, for example by adding it to a Claude Project or pointing a coding agent at
-the file. Give it one system, not both: formsflow.ai is an independent brand,
-and mixing the two produces neither. Don't copy values into other files; link
-to the file so updates reach you.
+## Using these files
+
+Give your agent one system, not both: formsflow.ai is an independent brand,
+and mixing the two produces neither. Get the file through one of the routes
+below so updates reach you, and don't copy values out of it into other files.
+
+Each system ships as a Claude plugin (`formsflow-design` or `aot-design`)
+from this repo's marketplace, `aot-design-systems`. The plugin holds a skill
+that loads the brand's `DESIGN.md` before UI or copy work.
+
+### Claude, Cowork and Claude Code (AOT Team plan)
+
+Install the plugin for your brand from **Customize > Plugins** on claude.ai.
+It also reaches Claude Code when you sign in with your claude.ai account
+(Claude Code v2.1.273 or later). You don't need access to this repo.
+
+Owner setup, once: **Organization settings > Plugins & skills > Add > Sync
+from GitHub**, choose `AOT-Technologies/aot-design-systems` and leave **Sync
+automatically** on. Set each plugin's availability so people get the brand
+they work on, rather than installing both for everyone. Each merge to `main`
+syncs.
+
+### Claude Code without a claude.ai sign-in
+
+Add the marketplace from GitHub. You need read access to this repo and a
+stored git credential (`gh auth login`, then `gh auth setup-git`, or an SSH
+key loaded in `ssh-agent`).
+
+```
+claude plugin marketplace add AOT-Technologies/aot-design-systems
+claude plugin install formsflow-design@aot-design-systems    # or aot-design
+```
+
+Plugins track `main`. To get updates automatically, turn on auto-update in
+`/plugin` under **Marketplaces**; otherwise run
+`claude plugin marketplace update aot-design-systems`.
+
+### Other teams and other agents: GitHub releases
+
+Each merge to `main` that changes a system's `DESIGN.md` publishes a release
+tagged `<system>/YYYY-MM-DD`, with the file attached and that system's
+`CHANGELOG.md` entries as notes. You need read access to this repo; in CI, use
+a token that can read it.
+
+```
+# latest formsflow release (use aot/ for AOT Technologies)
+tag=$(gh release list --repo AOT-Technologies/aot-design-systems --json tagName \
+  --jq '[.[] | select(.tagName | startswith("formsflow/"))][0].tagName')
+gh release download "$tag" --repo AOT-Technologies/aot-design-systems --pattern DESIGN.md
+```
+
+Pin a tag to stay on a version. Put the file at your repo's root, where
+agents look for `DESIGN.md`, and replace it whole when you update.
 
 ## How each system is maintained
 
@@ -43,6 +91,11 @@ src/DESIGN.prose.md     ─┘   decisions + hand-written guidance
 AOT Technologies Design System in Claude Design is upstream: a token change is
 made there first, then mirrored here.
 
+**Plugins and releases are built from the systems.** Each plugin's `SKILL.md`
+and `plugin.json` are hand-authored. The `DESIGN.md` beside `SKILL.md` is a
+copy that `make build` writes; don't edit it. Releases are created by
+`.github/workflows/release.yml`; don't tag or release by hand.
+
 ## Proposing a change
 
 1. Copy `changes/TEMPLATE.md` (or run `/new-change` in Claude Code). Name the
@@ -62,13 +115,15 @@ made there first, then mirrored here.
 ## Commands
 
 ```
-make build [SYSTEM=formsflow]   # regenerate formsflow's DESIGN.md
+make build [SYSTEM=<name>]      # regenerate formsflow's DESIGN.md, refresh plugin copies
 make verify [SYSTEM=<name>]     # check every system, or one
+python3 scripts/release.py --dry-run   # show what the next merge would release
 ```
 
-Every system must lint at 0 errors and 0 warnings. formsflow also checks that
-its `DESIGN.md` matches a fresh build and that its prose colour ramp matches
-the tokens. Requires Python 3.9+ (standard library only) and Node 18+.
+Every system must lint at 0 errors and 0 warnings, and its plugin copy must
+match its `DESIGN.md`. formsflow also checks that its `DESIGN.md` matches a
+fresh build and that its prose colour ramp matches the tokens. Requires
+Python 3.9+ (standard library only) and Node 18+.
 
 ## Status
 

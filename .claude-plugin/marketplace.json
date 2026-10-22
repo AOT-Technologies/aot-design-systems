@@ -1,0 +1,19 @@
+{
+  "name": "aot-design-systems",
+  "description": "DESIGN.md files for the formsflow.ai and AOT Technologies design systems. Install the plugin for the brand you're working on, not both.",
+  "owner": {
+    "name": "AOT Technologies"
+  },
+  "plugins": [
+    {
+      "name": "formsflow-design",
+      "source": "./plugins/formsflow-design",
+      "description": "formsflow.ai design system: product UI, marketing site and email."
+    },
+    {
+      "name": "aot-design",
+      "source": "./plugins/aot-design",
+      "description": "AOT Technologies design system: brand, collateral and AOT-branded product UI."
+    }
+  ]
+}

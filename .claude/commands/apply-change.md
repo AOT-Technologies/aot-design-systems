@@ -16,11 +16,12 @@ Apply the change request at `$ARGUMENTS`.
 4. Apply Part B exactly as written, touching only files under
    `systems/<system>/`. If a find string doesn't match exactly once, stop and
    report it. Don't approximate.
-5. For a generated system, run `make build SYSTEM=<system>`. Then run
-   `make verify`. If anything fails, report it and stop.
+5. Run `make build SYSTEM=<system>` (for aot, this only refreshes the plugin
+   copy). Then run `make verify`. If anything fails, report it and stop.
 6. Compare `git diff` with the expected diff in Part C. Map every changed hunk
-   to a part of the request, and list anything that doesn't map. Confirm the
-   other system's files are untouched.
+   to a part of the request, and list anything that doesn't map. The plugin
+   copy under `plugins/<system>-design/` should match the `DESIGN.md` diff.
+   Confirm the other system's files are untouched.
 7. Update `CHANGELOG.md` and the request's **Status**, then show a short
    summary covering what changed, the verify result and anything unexpected.
    **Stop and wait for approval.**

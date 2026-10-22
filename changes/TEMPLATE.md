@@ -31,7 +31,7 @@ Each find string must match exactly once.>
 
 ## Part C: build and verify
 
-1. formsflow: `make build SYSTEM=formsflow`. aot: no build step.
+1. `make build SYSTEM=<system>` (aot: refreshes only the plugin copy).
 2. `make verify`: every check passes for every system.
 3. `git diff systems/<system>/DESIGN.md`. Expect exactly: <list>. Report
    anything else.
