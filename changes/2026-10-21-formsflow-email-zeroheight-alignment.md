@@ -3,7 +3,7 @@
 - **ID:** 2026-10-21-formsflow-email-zeroheight-alignment
 - **System:** formsflow
 - **Requested by:** Tim
-- **Status:** pending
+- **Status:** applied (2026-10-21)
 - **Touches:** `systems/formsflow/src/DESIGN.prose.md`
 
 ## Why
