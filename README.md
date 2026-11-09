@@ -61,7 +61,9 @@ tag=$(gh release list --repo AOT-Technologies/aot-design-systems --json tagName 
 gh release download "$tag" --repo AOT-Technologies/aot-design-systems --pattern DESIGN.md
 ```
 
-Pin a tag to stay on a version. Put the file at your repo's root, where
+Always name a tag or filter by the system prefix, as above. Don't use
+GitHub's "Latest" release: it's the newest release from either system. Pin a
+tag to stay on a version. Put the file at your repo's root, where
 agents look for `DESIGN.md`, and replace it whole when you update.
 
 ## How each system is maintained
