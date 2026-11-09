@@ -9,8 +9,9 @@ release tag. If it differs, or the system has no release yet, creates:
     asset    DESIGN.md
     notes    CHANGELOG.md entries tagged [<name>] that weren't in the previous release
 
-Releases are never marked "Latest": the repo holds two systems, so a
-repo-wide latest would point at whichever released last.
+Releases are created with --latest=false, but GitHub still shows the newest
+release as the repo's "Latest", whichever system it belongs to. Consumers must
+name a tag or filter by the <name>/ prefix (see the README).
 
 Runs from .github/workflows/release.yml on every push to main. Needs full
 history and tags, and `gh` authenticated (GH_TOKEN).
