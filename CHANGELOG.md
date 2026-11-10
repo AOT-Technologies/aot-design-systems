@@ -3,6 +3,17 @@
 Changes to the published `DESIGN.md` files. Newest first, each entry tagged
 with its system.
 
+## 2026-11-10 [aot] Primary button hover and shadow tokens
+
+- New `colors.primary-hover` (`#33B9E2`, sky-blue darkened 6%), used by
+  `button-primary-hover`. It matches `--color-brand-hover` in Claude Design.
+- New `shadows` group: `xs`, `sm`, `md` and `lg` with the exact upstream
+  values, plus `focus` for the 3px sky-blue ring. The Elevation prose now
+  names these tokens instead of giving ranges.
+- Motion prose: buttons darken ~6% on hover, not brighten; primary buttons use
+  `{colors.primary-hover}`.
+- Request: `changes/2026-10-21-aot-button-hover-and-shadows.md`.
+
 ## 2026-10-22 [repo] Claude plugins and GitHub releases
 
 - The repo is now a Claude plugin marketplace, `aot-design-systems`, with one

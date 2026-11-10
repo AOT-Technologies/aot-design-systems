@@ -4,6 +4,7 @@ name: AOT Technologies
 description: Brand and product design system for AOT Technologies.
 colors:
   primary: "#36C5F0"          # sky-blue — signature, the triangle
+  primary-hover: "#33B9E2"    # sky-blue darkened 6% — primary button hover
   on-primary: "#2C373C"       # gunmetal text on sky/amber
   secondary: "#2C373C"        # gunmetal — dark surfaces & solid controls
   on-secondary: "#FFFFFF"
@@ -68,6 +69,12 @@ spacing:
   xl: 32px
   2xl: 48px
   3xl: 64px
+shadows:
+  xs: "0 1px 2px rgba(44, 55, 60, 0.06)"
+  sm: "0 1px 3px rgba(44, 55, 60, 0.08), 0 1px 2px rgba(44, 55, 60, 0.06)"
+  md: "0 4px 12px rgba(44, 55, 60, 0.08), 0 2px 4px rgba(44, 55, 60, 0.05)"
+  lg: "0 12px 32px rgba(44, 55, 60, 0.12), 0 4px 8px rgba(44, 55, 60, 0.06)"
+  focus: "0 0 0 3px rgba(54, 197, 240, 0.35)"
 components:
   button-primary:
     backgroundColor: "{colors.primary}"
@@ -76,7 +83,7 @@ components:
     rounded: "{rounded.pill}"
     padding: "{spacing.md}"
   button-primary-hover:
-    backgroundColor: "{colors.primary}"
+    backgroundColor: "{colors.primary-hover}"
     textColor: "{colors.on-primary}"
   button-secondary:
     backgroundColor: "{colors.secondary}"
@@ -218,15 +225,15 @@ textures — the flat vector brand illustrations supply colour and personality. 
 
 ## Elevation & Depth
 
-Shadows are **cool, gunmetal-tinted and low-spread**. Resting cards use `xs`/`sm`
-(`0 1px 2–3px rgba(44,55,60,.06–.08)`); overlays and hovers lift to `md`/`lg`
-(`0 4–12px rgba(44,55,60,.08–.12)`). Focus is a **3px sky-blue ring**
-(`0 0 0 3px rgba(54,197,240,.35)`). No warm or heavy drop shadows, no glassmorphism. A
+Shadows are **cool, gunmetal-tinted and low-spread**. Resting cards use `{shadows.xs}`/`{shadows.sm}`; overlays and hovers lift to
+`{shadows.md}`/`{shadows.lg}`. Focus is a **3px sky-blue ring**
+(`{shadows.focus}`). Use these values exactly. No warm or heavy drop shadows, no glassmorphism. A
 `rgba(44,55,60,.35–.4)` gunmetal scrim sits behind modals and slide-overs; interactive cards lift 2px.
 
 **Motion** is quick and understated: 120ms / 200ms / 320ms durations with `ease-standard`
 (`cubic-bezier(.4,0,.2,1)`) and `ease-out` (`cubic-bezier(.16,1,.3,1)`). Buttons scale to `0.97` on
-press and brighten ~6% on hover; icon-buttons scale to `0.92`; modals fade + scale from `0.96`. No
+press. On hover, primary buttons use `{colors.primary-hover}`; other variants
+darken ~6%; icon-buttons scale to `0.92`; modals fade + scale from `0.96`. No
 bounces, no infinite loops.
 
 ## Shapes
