@@ -9,7 +9,7 @@
 ## Why
 
 <What's wrong or missing, and where the correct answer comes from (zeroheight
-page, Figma file, Claude Design project, decision).>
+page, Figma file, AOT Design System artifact in Claude, decision).>
 
 ## Decisions
 
@@ -20,7 +20,8 @@ these.>
 
 - formsflow: the Figma change, with exact expected values, then a fresh export
   into `tokens/`. Include a check Claude Code runs on the new export.
-- aot: the change in the Claude Design project, with exact expected values.
+- aot: the change in the AOT Design System artifact in Claude, with exact
+  expected values.
 
 ## Part B: source edits
 

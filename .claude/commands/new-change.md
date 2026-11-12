@@ -13,8 +13,8 @@ Draft a change request for: $ARGUMENTS
 3. Copy `changes/TEMPLATE.md` to `changes/<YYYY-MM-DD>-<system>-<slug>.md` and
    fill it in with **Status: draft**.
 4. Put any new or changed token values in Part A as an upstream step for a
-   person (Figma for formsflow, Claude Design for aot), with the exact expected
-   values.
+   person (Figma for formsflow, the AOT Design System artifact in Claude for
+   aot), with the exact expected values.
 5. Write Part B as exact find-and-replace pairs against the current files, and
    confirm each find string matches exactly once.
 6. Don't fill in decisions yourself. List any open question under Decisions as

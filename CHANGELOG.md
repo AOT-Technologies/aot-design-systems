@@ -3,6 +3,16 @@
 Changes to the published `DESIGN.md` files. Newest first, each entry tagged
 with its system.
 
+## 2026-11-12 [repo] AOT upstream moved to Claude
+
+- The AOT Technologies Design System moved from standalone Claude Design to a
+  Design System artifact in Claude (https://claude.ai/artifact/YCmVtamuUv1XR4spQE447N) on 2026-11-10.
+- `CLAUDE.md`, the README, `/new-change`, `/apply-change` and
+  `changes/TEMPLATE.md` now name the artifact as AOT's upstream. `CLAUDE.md`
+  says how to check upstream values now that `/design-sync` can't reach it.
+- The references inside `systems/aot/` change separately:
+  `changes/2026-11-10-aot-upstream-reference.md`.
+
 ## 2026-11-12 [formsflow] Primary button states
 
 - `button-primary` no longer has a solid `primary` fill at rest. The product

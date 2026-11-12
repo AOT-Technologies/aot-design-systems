@@ -90,8 +90,9 @@ src/DESIGN.prose.md     ─┘   decisions + hand-written guidance
   for agents.
 
 **AOT Technologies is hand-authored.** Its `DESIGN.md` is edited directly. The
-AOT Technologies Design System in Claude Design is upstream: a token change is
-made there first, then mirrored here.
+AOT Technologies Design System, a Design System artifact in Claude
+(https://claude.ai/artifact/YCmVtamuUv1XR4spQE447N), is upstream: a token
+change is made there first, then mirrored here.
 
 **Plugins and releases are built from the systems.** Each plugin's `SKILL.md`
 and `plugin.json` are hand-authored. The `DESIGN.md` beside `SKILL.md` is a
