@@ -3,6 +3,14 @@
 Changes to the published `DESIGN.md` files. Newest first, each entry tagged
 with its system.
 
+## 2026-11-12 [aot] Upstream reference after the move to Claude
+
+- The source comment in `DESIGN.md` and `system.json` now name the AOT Design
+  System artifact in Claude (https://claude.ai/artifact/YCmVtamuUv1XR4spQE447N)
+  as the source, with the old Claude Design project ID kept as history.
+- No token values change.
+- Request: `changes/2026-11-10-aot-upstream-reference.md`.
+
 ## 2026-11-12 [formsflow] Primary button states
 
 - `button-primary` no longer has a solid `primary` fill at rest. The product

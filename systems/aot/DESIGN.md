@@ -273,4 +273,4 @@ inlined as SVG with `stroke="currentColor"` so they inherit text colour. Never e
   glassmorphism.
 - **Don't** capitalise product names — caseflow, formsflow and m8flow are always lowercase.
 
-<!-- Source: AOT Technologies Design System (Claude Design project 875c59c0-39ca-4f76-b742-061041f7f2ac). -->
+<!-- Source: AOT Technologies Design System, a Design System artifact in Claude (https://claude.ai/artifact/YCmVtamuUv1XR4spQE447N); moved from Claude Design project 875c59c0-39ca-4f76-b742-061041f7f2ac on 2026-11-10. -->

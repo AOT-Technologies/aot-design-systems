@@ -2,6 +2,6 @@
   "name": "aot",
   "title": "AOT Technologies",
   "mode": "manual",
-  "source": "AOT Technologies Design System, Claude Design project 875c59c0-39ca-4f76-b742-061041f7f2ac",
+  "source": "AOT Technologies Design System, Design System artifact in Claude https://claude.ai/artifact/YCmVtamuUv1XR4spQE447N (moved from Claude Design project 875c59c0-39ca-4f76-b742-061041f7f2ac on 2026-11-10)",
   "checks": ["plugin-current", "lint"]
 }
