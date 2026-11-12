@@ -10,7 +10,7 @@ stay inside the rules below.
 | System | Folder | Mode | Source of truth |
 | --- | --- | --- | --- |
 | formsflow.ai | `systems/formsflow/` | generated | Figma exports in `tokens/`, plus `src/` |
-| AOT Technologies | `systems/aot/` | manual | Claude Design project `875c59c0-39ca-4f76-b742-061041f7f2ac` |
+| AOT Technologies | `systems/aot/` | manual | AOT Design System artifact in Claude (https://claude.ai/artifact/YCmVtamuUv1XR4spQE447N) |
 
 Each folder's `system.json` records its mode and the checks it must pass.
 
@@ -46,9 +46,14 @@ export. The first real export replaces them.
 front matter (colours, type, radii, spacing, components) is edited directly.
 Run `make build SYSTEM=aot` afterwards to refresh its plugin copy.
 
-- The Claude Design project is upstream. A token value changes there first, by
-  a person, and is then mirrored here through a change request. Don't change a
-  value only in this repo.
+- The AOT Design System artifact in Claude is upstream. It moved there from
+  standalone Claude Design (project `875c59c0-39ca-4f76-b742-061041f7f2ac`) on
+  2026-11-10. A token value changes there first, by a person, and is then
+  mirrored here through a change request. Don't change a value only in this
+  repo.
+- To check upstream values, read the artifact's files under `project/` (for
+  example `project/tokens/colors.css`) with the Artifact tool. `/design-sync`
+  can't read or update a design system that has moved to Claude.
 - Keep the existing front-matter conventions: rem font sizes with a px comment,
   named spacing (`xs` to `3xl`), and component references such as
   `"{colors.primary}"`.
