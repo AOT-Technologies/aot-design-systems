@@ -3,6 +3,19 @@
 Changes to the published `DESIGN.md` files. Newest first, each entry tagged
 with its system.
 
+## 2026-11-12 [formsflow] Primary button states
+
+- `button-primary` no longer has a solid `primary` fill at rest. The product
+  spec follows the formsflow V8 Primary-Button: gray-50 fill, 1px indigo-500
+  border, gray-800 `body-sml` text. On hover the border turns to `primary`.
+- New selected (indigo-100 fill, `primary` border) and disabled (indigo-300
+  border, gray-200 text) states. "Pressed" is no longer specified.
+- New marketing-pages variant from the web Nav CTA: indigo-100 fill, 1px
+  `primary` border, gray-800 `body` text. On hover it fills `primary` with
+  `on-primary` text.
+- `primary-hover` is unchanged, though no button state uses it now.
+- Request: `changes/2026-11-12-formsflow-button-primary-states.md`.
+
 ## 2026-11-10 [aot] Primary button hover and shadow tokens
 
 - New `colors.primary-hover` (`#33B9E2`, sky-blue darkened 6%), used by

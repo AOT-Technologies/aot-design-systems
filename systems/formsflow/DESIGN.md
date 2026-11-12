@@ -262,8 +262,11 @@ icon buttons — where `pill` isn't enough). Don't introduce radii outside these
 
 ## Components
 
-- **button-primary** — bg `primary`, text `on-primary`, radius `pill`, padding `12px 20px`.
-- **button-primary (hover/pressed)** — bg `primary-hover`.
+- **button-primary** — bg `gray-50`, border `1px indigo-500`, text `gray-800` (`body-sml`), radius `pill`, padding `12px 20px`. Never a solid `primary` fill at rest.
+- **button-primary (hover)** — border `1px primary`; bg and text unchanged.
+- **button-primary (selected)** — bg `indigo-100`, border `1px primary`.
+- **button-primary (disabled)** — border `1px indigo-300`, text `gray-200`.
+- **button-primary (marketing pages)** — bg `indigo-100`, border `1px primary`, text `gray-800` (`body`), radius `pill`, padding `12px 20px`; on hover, bg `primary`, text `on-primary`.
 - **card** — surface `gray-white`, border `1px gray-200`, radius `md`, `shadow-sm`.
 - **input** — surface `gray-white`, border `1px gray-300`, radius `md`; on focus add `shadow-focus`.
 
