@@ -9,9 +9,9 @@ Apply the change request at `$ARGUMENTS`.
    that system's mode in `systems/<system>/system.json`. Restate the scope in
    two or three sentences. If the request has no single System, stop and ask.
 2. Check every precondition, especially Part A (a fresh Figma export for
-   formsflow, or a confirmed Claude Design change for aot). If a precondition
-   isn't met, stop and say exactly what a person needs to do. Don't work
-   around it, and never hand-edit generated files.
+   formsflow, or a confirmed change to the AOT Design System artifact in Claude
+   for aot). If a precondition isn't met, stop and say exactly what a person
+   needs to do. Don't work around it, and never hand-edit generated files.
 3. Create a branch named `change/<request ID>`.
 4. Apply Part B exactly as written, touching only files under
    `systems/<system>/`. If a find string doesn't match exactly once, stop and
