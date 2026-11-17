@@ -36,6 +36,27 @@ Neither the 2025 brand style guide nor the design system gives mobile or
 responsive heading sizes. The style guide only says sizes adapt at
 breakpoints.
 
+### Small screens
+
+The live site does shrink its headings on phones. Measured on 17 November
+2026 with iPhone 14 emulation (390px wide), across the same 19 pages:
+
+| Level | Website on phones (most common) | Website on phones (other values) | Desktop, for comparison |
+| --- | --- | --- | --- |
+| H1 | Aron 700, 35px (13 pages) | Aron 700 at 39.68px (Products, delphi) and 43.52px (Data + AI, Education); Arial 700, 38.4px (homepage hero, F-30) | 67.2px (15 pages) |
+| H2 | Aron 700, 40.96px (60 headings, 17 pages) | Aron 400, 40.96px (6 pages); Aron 700 at 38.4px (5 pages) and 30.72px (4 pages); a few at 19.2px to 25.6px | 64px |
+| H3 | Aron 700 at 16.64px, 25.6px or 23.04px | 23 font, size and weight combinations from 12.8px to 44.8px, almost all Aron | 16px to 56px |
+
+- On most pages, **H2 is larger than H1 on phones** (40.96px against 35px).
+  On desktop the two are close (64px and 67.2px).
+- On a tablet (iPad emulation, 820px wide; homepage, delphi and Data + AI
+  only), H1 is 51.2px to 64px and H2 is 40.96px to 42px.
+- SLED360 has no H1 on any screen size (finding F-16).
+- Only phone emulation gives these values. A desktop browser narrowed to
+  390px renders larger headings (for example, the delphi H1 at 49.6px
+  instead of 39.68px), so don't use one to check this.
+- Android profiles couldn't be measured: the site shows them a bot check.
+
 The heading fix has been taken out of the web developer's brief until this
 request is decided, so the developer doesn't build to a scale that may
 change.
@@ -57,7 +78,8 @@ Not yet made. Claude Code doesn't make these.
    uses Poppins Medium.
 4. **Open: mobile sizes.** Whether the design system should define heading
    sizes for small screens and, if so, their values. Nothing upstream defines
-   them today.
+   them today. The site's current phone sizes are under "Small screens"
+   above, for reference only.
 
 ## Part A: upstream change (a person does this first)
 
